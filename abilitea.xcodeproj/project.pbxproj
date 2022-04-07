@@ -18,6 +18,7 @@
 		49BC74B427FF1B4600F8E614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B227FF1B4600F8E614 /* Main.storyboard */; };
 		49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B527FF1B4700F8E614 /* Assets.xcassets */; };
 		49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */; };
+		6B88CA0D27FF3515000E70D5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B88CA0C27FF3515000E70D5 /* TutorialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		49BC74B527FF1B4700F8E614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BC74B827FF1B4700F8E614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BC74BA27FF1B4700F8E614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B88CA0C27FF3515000E70D5 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
 				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
 				49BC74BA27FF1B4700F8E614 /* Info.plist */,
+				6B88CA0C27FF3515000E70D5 /* TutorialViewController.swift */,
 			);
 			path = abilitea;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */,
+				6B88CA0D27FF3515000E70D5 /* TutorialViewController.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
 				1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */,
