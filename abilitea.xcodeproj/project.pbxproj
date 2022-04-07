@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6927FF210E00DAEA4C /* questionStructure.swift */; };
+		1569CD6C27FF215300DAEA4C /* questionStructureRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */; };
+		1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */; };
+		1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */; };
+		1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */; };
 		49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */; };
 		49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */; };
 		49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74B027FF1B4600F8E614 /* ViewController.swift */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1569CD6927FF210E00DAEA4C /* questionStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionStructure.swift; sourceTree = "<group>"; };
+		1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionStructureRead.swift; sourceTree = "<group>"; };
+		1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederNum.swift; sourceTree = "<group>"; };
+		1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederProb.swift; sourceTree = "<group>"; };
+		1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederCrit.swift; sourceTree = "<group>"; };
 		49BC74A927FF1B4600F8E614 /* abilitea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abilitea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +72,11 @@
 				49BC74B227FF1B4600F8E614 /* Main.storyboard */,
 				49BC74B527FF1B4700F8E614 /* Assets.xcassets */,
 				49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */,
+				1569CD6927FF210E00DAEA4C /* questionStructure.swift */,
+				1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */,
+				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
+				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
+				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
 				49BC74BA27FF1B4700F8E614 /* Info.plist */,
 			);
 			path = abilitea;
@@ -138,9 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
+				1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */,
+				1569CD6C27FF215300DAEA4C /* questionStructureRead.swift in Sources */,
+				1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */,
 				49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */,
+				1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
