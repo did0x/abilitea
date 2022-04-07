@@ -9,6 +9,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //Data
+    
+    //DataControl
+    
+    //Outlet
     @IBOutlet weak var topicLabel: UILabel!
     @IBOutlet weak var quizNumberLabel: UILabel!
     @IBOutlet weak var quizImage: UIImageView!
