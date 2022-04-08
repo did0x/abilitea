@@ -12,6 +12,7 @@
 		1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */; };
 		1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */; };
 		1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */; };
+		498D5FBA28002D8700F80C79 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 498D5FB928002D8700F80C79 /* .gitignore */; };
 		49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */; };
 		49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */; };
 		49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BC74B027FF1B4600F8E614 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederNum.swift; sourceTree = "<group>"; };
 		1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederProb.swift; sourceTree = "<group>"; };
 		1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederCrit.swift; sourceTree = "<group>"; };
+		498D5FB928002D8700F80C79 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		49BC74A927FF1B4600F8E614 /* abilitea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = abilitea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		49BC74A027FF1B4600F8E614 = {
 			isa = PBXGroup;
 			children = (
+				498D5FB928002D8700F80C79 /* .gitignore */,
 				49BC74AB27FF1B4600F8E614 /* abilitea */,
 				49BC74AA27FF1B4600F8E614 /* Products */,
 			);
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498D5FBA28002D8700F80C79 /* .gitignore in Resources */,
 				49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */,
 				49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */,
 				49BC74B427FF1B4600F8E614 /* Main.storyboard in Resources */,
