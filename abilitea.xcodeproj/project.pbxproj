@@ -47,6 +47,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		497033C2280019B90064E36F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1569CD6927FF210E00DAEA4C /* questionStructure.swift */,
+				1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */,
+				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
+				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
+				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		497033C3280019BF0064E36F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		497033C4280019C80064E36F /* System */ = {
+			isa = PBXGroup;
+			children = (
+				49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */,
+				49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */,
+				49BC74B527FF1B4700F8E614 /* Assets.xcassets */,
+				49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */,
+				49BC74BA27FF1B4700F8E614 /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		49BC74A027FF1B4600F8E614 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +98,10 @@
 		49BC74AB27FF1B4600F8E614 /* abilitea */ = {
 			isa = PBXGroup;
 			children = (
-				49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */,
-				49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */,
-				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
+				497033C3280019BF0064E36F /* Controller */,
+				497033C2280019B90064E36F /* Models */,
+				497033C4280019C80064E36F /* System */,
 				49BC74B227FF1B4600F8E614 /* Main.storyboard */,
-				49BC74B527FF1B4700F8E614 /* Assets.xcassets */,
-				49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */,
-				1569CD6927FF210E00DAEA4C /* questionStructure.swift */,
-				1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */,
-				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
-				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
-				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
-				49BC74BA27FF1B4700F8E614 /* Info.plist */,
 			);
 			path = abilitea;
 			sourceTree = "<group>";
@@ -311,9 +335,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = abilitea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,9 +364,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = abilitea/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
