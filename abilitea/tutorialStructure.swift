@@ -1,14 +1,14 @@
 //
-//  questionStructure.swift
-//  QuizAbilitea
+//  tutorialStructure.swift
+//  abilitea
 //
-//  Created by Hanz Christian on 06/04/22.
+//  Created by Hanz Christian on 07/04/22.
 //
 
 import Foundation
 import UIKit
 
-struct questionStructure{
+struct tutorialStructure{
     
     let questionImage:String?
     let questionText:String?
@@ -19,6 +19,10 @@ struct questionStructure{
     let optionD:String?
     
     let answer:String?
+    
+    let wronganswerDesc:String?
+    let correctanswerDesc:String?
+    let category:String?
+    
+    
 }
-
-

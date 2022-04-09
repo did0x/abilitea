@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15579214280151C20035313C /* tutorialFeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15579213280151C20035313C /* tutorialFeeder.swift */; };
+		15579216280151CD0035313C /* tutorialStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15579215280151CD0035313C /* tutorialStructure.swift */; };
 		1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6927FF210E00DAEA4C /* questionStructure.swift */; };
 		1569CD6C27FF215300DAEA4C /* questionStructureRead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */; };
 		1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15579213280151C20035313C /* tutorialFeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialFeeder.swift; sourceTree = "<group>"; };
+		15579215280151CD0035313C /* tutorialStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorialStructure.swift; sourceTree = "<group>"; };
 		1569CD6927FF210E00DAEA4C /* questionStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionStructure.swift; sourceTree = "<group>"; };
 		1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionStructureRead.swift; sourceTree = "<group>"; };
 		1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionFeederNum.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
 				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
 				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
+				15579213280151C20035313C /* tutorialFeeder.swift */,
+				15579215280151CD0035313C /* tutorialStructure.swift */,
 				49BC74BA27FF1B4700F8E614 /* Info.plist */,
 			);
 			path = abilitea;
@@ -154,11 +160,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */,
+				15579216280151CD0035313C /* tutorialStructure.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
 				1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */,
 				1569CD6C27FF215300DAEA4C /* questionStructureRead.swift in Sources */,
 				1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */,
+				15579214280151C20035313C /* tutorialFeeder.swift in Sources */,
 				49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */,
 				1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */,
 			);
