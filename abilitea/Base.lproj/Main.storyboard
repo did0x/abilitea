@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O8T-ma-GzL">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,32 +14,135 @@
             <objects>
                 <viewController id="5GD-Ov-4nc" customClass="SettingsViewController" customModule="abilitea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xlF-SB-GFJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hwX-oS-ejv">
+                                <rect key="frame" x="53" y="405" width="284" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="IBH-OT-vID"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="icon-setting-black" selectedImage="icon-setting-white" id="OJe-CI-FVJ"/>
+                    <connections>
+                        <outlet property="Occupation" destination="hwX-oS-ejv" id="7If-RD-7Cv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6Z-gh-kWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-352" y="-603"/>
+            <point key="canvasLocation" x="-352.30769230769232" y="-603.55450236966817"/>
         </scene>
         <!--Homepage-->
         <scene sceneID="gWt-zl-oeF">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u0Z-hm-1yI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Jre-ct-1MC" customClass="HomepageViewController" customModule="abilitea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4ul-oi-Qjn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepage-whiteplate" translatesAutoresizingMaskIntoConstraints="NO" id="BuH-Ke-cfM">
+                                <rect key="frame" x="0.0" y="227" width="390" height="637"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome!" textAlignment="natural" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="wh4-Uc-7OF">
+                                <rect key="frame" x="25" y="279" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Complete all these modules below to unlock your Cognitive test Ability." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DAc-wr-mCK">
+                                <rect key="frame" x="20" y="303" width="251" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0qz-4o-6bP">
+                                <rect key="frame" x="25" y="373" width="341" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="9Ka-Ht-9aA">
+                                    <size key="itemSize" width="120" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="CCM-53-joS" customClass="ModuleCollectionViewCell" customModule="abilitea" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CkH-Gb-EIq">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepage-module-RC-beforeFinish" translatesAutoresizingMaskIntoConstraints="NO" id="4sU-WW-vKR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4sU-WW-vKR" firstAttribute="top" secondItem="CkH-Gb-EIq" secondAttribute="top" id="1Rc-jG-Aiv"/>
+                                                <constraint firstAttribute="bottom" secondItem="4sU-WW-vKR" secondAttribute="bottom" id="F6S-dV-014"/>
+                                                <constraint firstItem="4sU-WW-vKR" firstAttribute="leading" secondItem="CkH-Gb-EIq" secondAttribute="leading" id="bSr-nW-ziz"/>
+                                                <constraint firstAttribute="trailing" secondItem="4sU-WW-vKR" secondAttribute="trailing" id="fHL-LL-Tne"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="120" height="170"/>
+                                        <connections>
+                                            <outlet property="modulCognitive" destination="4sU-WW-vKR" id="SWX-v3-8Pr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jre-ct-1MC" id="3i0-wY-mof"/>
+                                    <outlet property="delegate" destination="Jre-ct-1MC" id="t2P-C5-1FT"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepage-placeholder-illustrasi" translatesAutoresizingMaskIntoConstraints="NO" id="5y3-Hn-qQ4">
+                                <rect key="frame" x="25" y="78" width="341" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="homepage-challangeOff" translatesAutoresizingMaskIntoConstraints="NO" id="qYP-ji-H9b">
+                                <rect key="frame" x="25" y="571" width="341" height="137"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofY-dk-duZ">
+                                <rect key="frame" x="315" y="298" width="51" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="homepage-historyButton-small" title=""/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Take Your Cognitive Test!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-4v-hI9">
+                                <rect key="frame" x="61" y="586" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Let’s try your cognitive ability" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-OE-8OP">
+                                <rect key="frame" x="61" y="610" width="268" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV1-ka-dYN">
+                                <rect key="frame" x="57" y="639" width="277" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="homepage-challangeOff-Lock" title=""/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jut-aK-Exl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Homepage" image="icon-home-black" selectedImage="icon-home-white" id="Mc5-CN-PJD"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="u0Z-hm-1yI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1248" y="-603"/>
+            <point key="canvasLocation" x="-1250.7692307692307" y="-603.55450236966817"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="p2q-6z-r7j">
@@ -50,6 +154,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
                                 <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
@@ -65,10 +172,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homepage-challangeOff" width="380" height="150"/>
+        <image name="homepage-challangeOff-Lock" width="253" height="45"/>
+        <image name="homepage-historyButton-small" width="66" height="66"/>
+        <image name="homepage-module-RC-beforeFinish" width="131" height="183"/>
+        <image name="homepage-placeholder-illustrasi" width="380" height="165"/>
+        <image name="homepage-whiteplate" width="428" height="662"/>
         <image name="icon-home-black" width="27" height="27"/>
         <image name="icon-home-white" width="27" height="27"/>
         <image name="icon-setting-black" width="27" height="27"/>
         <image name="icon-setting-white" width="27" height="27"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

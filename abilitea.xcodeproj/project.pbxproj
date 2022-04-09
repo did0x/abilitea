@@ -19,6 +19,7 @@
 		49BC74B427FF1B4600F8E614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B227FF1B4600F8E614 /* Main.storyboard */; };
 		49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B527FF1B4700F8E614 /* Assets.xcassets */; };
 		49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */; };
+		A19A056D280091340087843F /* ModuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A056C280091340087843F /* ModuleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		49BC74B527FF1B4700F8E614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BC74B827FF1B4700F8E614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BC74BA27FF1B4700F8E614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A19A056C280091340087843F /* ModuleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		497033C3280019BF0064E36F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A19A056C280091340087843F /* ModuleCollectionViewCell.swift */,
 				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -186,6 +189,7 @@
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
 				1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */,
 				1569CD6C27FF215300DAEA4C /* questionStructureRead.swift in Sources */,
+				A19A056D280091340087843F /* ModuleCollectionViewCell.swift in Sources */,
 				1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */,
 				49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */,
 				1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */,
