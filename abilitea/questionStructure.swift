@@ -8,17 +8,22 @@
 import Foundation
 import UIKit
 
-struct questionStructure{
-    
+struct questionStruct{
+
     let questionImage:String?
-    let questionText:String
-    
-    let optionA:String
-    let optionB:String
-    let optionC:String
-    let optionD:String
-    
-    let answer:String
+    let questionText:String?
+    let optionA:String?
+    let optionB:String?
+    let optionC:String?
+    let optionD:String?
+    let answer:String?
+
 }
 
+//extension questionStruct{
+//    func merge(with: questionStruct) -> questionStruct{
+//        var new = questionStruct()
+//        new.questionText = questionText ?? with.questionText
+//    }
+//}
 
