@@ -18,6 +18,72 @@ extension UIColor {
     }
 }
 
+class WelcomepageViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
+    
+    @IBOutlet weak var ilustrationImageView: UIImageView!
+    @IBOutlet weak var occupationButton: UIButton!
+    
+    @IBAction func popUpPicker(_ sender: UIButton) {
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        
+        pickerView.selectRow(selectedRow, inComponent: 0, animated: false)
+        
+        vc.view.addSubview(pickerView)
+        pickerView.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor).isActive = true
+        pickerView.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor).isActive = true
+        
+        let alert = UIAlertController(title: "Select Occupation", message: "", preferredStyle: .actionSheet)
+        alert.setValue(vc, forKey: "contentViewController")
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(UIAlertAction) in
+        }))
+        alert.addAction(UIAlertAction(title: "Proceed", style: .default, handler: {(UIAlertAction) in
+            self.selectedRow = pickerView.selectedRow(inComponent: 0)
+            let selected = Array(self.occupations)[self.selectedRow] //yang dipilih user, dijadiin parameter terhadap kategori yang diambil
+            self.occupationButton.setTitle(selected, for: .normal)
+        }))
+        self.present(alert,animated: true,completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ilustrationImageView.image = UIImage(named: "ilustrasiSementara")
+    }
+    
+    //data control
+    var screenWidth = UIScreen.main.bounds.width - 10
+    var screenHeight = UIScreen.main.bounds.height / 2
+    var selectedRow = 0
+    
+    let occupations = ["Engineer","Grapich Designer","Doctor","Teacher","Lecture","Architecture","Human Resource","Physcolog","Farmers"]
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let labelOccupation = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
+        labelOccupation.text = occupations[row]
+        labelOccupation.sizeToFit()
+        return labelOccupation
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return occupations.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 60
+    }
+    
+}
+
+
 class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return modulCognitives.count
