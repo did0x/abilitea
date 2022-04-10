@@ -17,7 +17,7 @@ struct questionStruct{
     let optionC:String?
     let optionD:String?
     let answer:String?
-
+    let category:String?
 }
 
 //extension questionStruct{
