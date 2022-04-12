@@ -22,7 +22,16 @@ extension UIColor {
 class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
     let occupationSelected =  UserDefaults.standard.object(forKey: "occupation") as? String //sebagai data yang bakal dipake buat occupation yang sesuai
+   
     
+    //outlet countdown
+
+    @IBOutlet weak var testLabel: UITextField!
+    let currDate = Date()
+    var timeRemainingSeconds:Int = 0
+    var timeRemaining:String?
+    var timer = Timer()
+  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(occupationSelected == nil){
             return modulCognitives.count //return 6
@@ -63,7 +72,46 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
 //        cell.modulCognitive.layer.cornerRadius=50.0
         return cell
     }
+   
     
+    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor =  UIColor(hex:0x6B5BE2)
+        runCountdown()
+    }
+
+    //countdown
+
+    func runCountdown(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func countTime(){
+        timeRemainingSeconds = 86400 + Int(currDate.timeIntervalSinceNow)
+        var hour:Int
+        var minute:Int
+        
+        hour = timeRemainingSeconds / 3600
+        minute = timeRemainingSeconds % 3600 / 60
+        
+        timeRemaining = "\(String(hour)) Hr \(String(minute)) Minutes"
+        
+        testLabel.text = timeRemaining
+        
+        if timeRemainingSeconds == 0{
+            timer.invalidate()
+        }
+    }
+    
+}
+
+
+class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var Occupation: UITextField!
     //inisiasi variable category berdasarkan occupation
     var modulCognitivesSD:[String]=["homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-AtD-beforeFinish"]
     var modulCognitivesGD:[String]=["homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
