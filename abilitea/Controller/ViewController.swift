@@ -83,8 +83,16 @@ class WelcomepageViewController: UIViewController,UIPickerViewDelegate,UIPickerV
     
 }
 
-
 class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    //outlet countdown
+
+    @IBOutlet weak var testLabel: UITextField!
+    let currDate = Date()
+    var timeRemainingSeconds:Int = 0
+    var timeRemaining:String?
+    var timer = Timer()
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return modulCognitives.count
     }
@@ -104,9 +112,35 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(hex:0x6B5BE2)
+        runCountdown()
     }
 
+    //countdown
+
+    func runCountdown(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func countTime(){
+        timeRemainingSeconds = 86400 + Int(currDate.timeIntervalSinceNow)
+        var hour:Int
+        var minute:Int
+        
+        hour = timeRemainingSeconds / 3600
+        minute = timeRemainingSeconds % 3600 / 60
+        
+        timeRemaining = "\(String(hour)) Hr \(String(minute)) Minutes"
+        
+        testLabel.text = timeRemaining
+        
+        if timeRemainingSeconds == 0{
+            timer.invalidate()
+        }
+    }
+    
 }
+
 
 class SettingsViewController: UIViewController {
     
