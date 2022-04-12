@@ -19,6 +19,9 @@
 		49BC74B427FF1B4600F8E614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B227FF1B4600F8E614 /* Main.storyboard */; };
 		49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B527FF1B4700F8E614 /* Assets.xcassets */; };
 		49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */; };
+		AFECDA54280581DB00F76D78 /* QuestionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECDA53280581DB00F76D78 /* QuestionImageCell.swift */; };
+		AFECF0D82800749600305FEB /* TutorialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFECF0D72800749600305FEB /* TutorialStoryboard.storyboard */; };
+		AFECF0DA280074B700305FEB /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF0D9280074B700305FEB /* TutorialController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		49BC74B527FF1B4700F8E614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49BC74B827FF1B4700F8E614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49BC74BA27FF1B4700F8E614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFECDA53280581DB00F76D78 /* QuestionImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionImageCell.swift; sourceTree = "<group>"; };
+		AFECF0D72800749600305FEB /* TutorialStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TutorialStoryboard.storyboard; sourceTree = "<group>"; };
+		AFECF0D9280074B700305FEB /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
+				AFECF0D9280074B700305FEB /* TutorialController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +112,8 @@
 				497033C2280019B90064E36F /* Models */,
 				497033C4280019C80064E36F /* System */,
 				49BC74B227FF1B4600F8E614 /* Main.storyboard */,
+				AFECF0D72800749600305FEB /* TutorialStoryboard.storyboard */,
+				AFECDA53280581DB00F76D78 /* QuestionImageCell.swift */,
 			);
 			path = abilitea;
 			sourceTree = "<group>";
@@ -167,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFECF0D82800749600305FEB /* TutorialStoryboard.storyboard in Resources */,
 				498D5FBA28002D8700F80C79 /* .gitignore in Resources */,
 				49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */,
 				49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */,
@@ -182,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */,
+				AFECDA54280581DB00F76D78 /* QuestionImageCell.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
 				1569CD7027FF218600DAEA4C /* questionFeederProb.swift in Sources */,
@@ -189,6 +200,7 @@
 				1569CD6E27FF216F00DAEA4C /* questionFeederNum.swift in Sources */,
 				49BC74AF27FF1B4600F8E614 /* SceneDelegate.swift in Sources */,
 				1569CD6A27FF210E00DAEA4C /* questionStructure.swift in Sources */,
+				AFECF0DA280074B700305FEB /* TutorialController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +354,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TutorialStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -371,7 +383,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = TutorialStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
