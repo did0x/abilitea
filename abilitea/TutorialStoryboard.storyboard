@@ -186,14 +186,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-268" y="29"/>
+            <point key="canvasLocation" x="-512" y="11"/>
         </scene>
         <!--Finish Tutorial-->
         <scene sceneID="eoQ-GN-TzR">
             <objects>
                 <viewController title="Finish Tutorial" id="1H1-vd-UDs" customClass="CongratulationController" customModule="abilitea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VV5-at-PbN">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulation!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGR-ac-eIw">
@@ -254,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i85-tH-mFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="537" y="69"/>
+            <point key="canvasLocation" x="1154" y="772"/>
         </scene>
         <!--Start Tutorial-->
         <scene sceneID="g9J-1D-BGf">
@@ -469,7 +469,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="icon-done-btn"/>
                                         <connections>
-                                            <segue destination="1H1-vd-UDs" kind="presentation" modalPresentationStyle="fullScreen" id="Num-dg-Q7D"/>
+                                            <action selector="buttonAction:" destination="bjP-1w-TLZ" eventType="touchUpInside" id="B4z-06-3Gd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -498,15 +498,67 @@
                         <outlet property="buttonMultipleChoice2" destination="OED-vw-VNG" id="p1x-LI-CJz"/>
                         <outlet property="buttonMultipleChoice3" destination="trI-bx-jZ2" id="mJY-Si-33N"/>
                         <outlet property="buttonMultipleChoice4" destination="8u9-xO-5K4" id="aS3-jL-A7R"/>
+                        <outlet property="categoryNavigationItem" destination="Kcs-09-v1x" id="0Hb-CC-HdD"/>
                         <outlet property="doneButton" destination="ehB-2g-cfI" id="Kam-lf-x3K"/>
                         <outlet property="navigationBarTutorial" destination="4M3-KR-ML7" id="0fA-o5-Svq"/>
                         <outlet property="questionImage" destination="nS6-p6-1YA" id="UhE-5f-exQ"/>
                         <outlet property="questionTextView" destination="MH1-V3-bwJ" id="b6p-45-Scp"/>
+                        <segue destination="QHU-1k-amF" kind="show" identifier="descriptionSegue" id="J0c-gD-q3N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIf-c7-CZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628.03738317757006" y="772.35421166306696"/>
+            <point key="canvasLocation" x="-593" y="772"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="awL-y8-huR">
+            <objects>
+                <viewController id="QHU-1k-amF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4H-D9-Lbc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQ5-mN-wbX">
+                                <rect key="frame" x="0.0" y="403" width="428" height="490"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Are Correct!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ng-Mo-Hfx">
+                                        <rect key="frame" x="37" y="59" width="184" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l85-x6-hc9">
+                                        <rect key="frame" x="37" y="96" width="356" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qh4-B5-khJ">
+                                        <rect key="frame" x="128" y="334" width="174" height="94"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="welcomepage-button"/>
+                                        <connections>
+                                            <segue destination="1H1-vd-UDs" kind="show" id="o5a-v9-agC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5rZ-d0-mLH"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hy2-Gh-e1q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XWt-Qq-0so" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="267.75700934579436" y="771.70626349892018"/>
         </scene>
     </scenes>
     <resources>
@@ -520,8 +572,12 @@
         <image name="icon-selected-answer-orange2" width="28" height="28"/>
         <image name="icon-selected-answer-white" width="28" height="28"/>
         <image name="icon-start-btn" width="150" height="80"/>
+        <image name="welcomepage-button" width="150" height="80"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
