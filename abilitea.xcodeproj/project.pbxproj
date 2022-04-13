@@ -26,6 +26,8 @@
 		AFECF3CF2806D066001B93E4 /* GetToKnowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF3CE2806D066001B93E4 /* GetToKnowController.swift */; };
 		AFECF3D1280707F6001B93E4 /* TutorialTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF3D0280707F6001B93E4 /* TutorialTestController.swift */; };
 		AFECF3D3280713F7001B93E4 /* CongratulationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF3D2280713F7001B93E4 /* CongratulationController.swift */; };
+		AFECF3D5280726E8001B93E4 /* TakeQuizStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFECF3D4280726E8001B93E4 /* TakeQuizStoryboard.storyboard */; };
+		AFECF3D7280731FC001B93E4 /* TakeTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF3D6280731FC001B93E4 /* TakeTestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		AFECF3CE2806D066001B93E4 /* GetToKnowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetToKnowController.swift; sourceTree = "<group>"; };
 		AFECF3D0280707F6001B93E4 /* TutorialTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTestController.swift; sourceTree = "<group>"; };
 		AFECF3D2280713F7001B93E4 /* CongratulationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationController.swift; sourceTree = "<group>"; };
+		AFECF3D4280726E8001B93E4 /* TakeQuizStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TakeQuizStoryboard.storyboard; sourceTree = "<group>"; };
+		AFECF3D6280731FC001B93E4 /* TakeTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeTestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				AFECF3CE2806D066001B93E4 /* GetToKnowController.swift */,
 				AFECF3D0280707F6001B93E4 /* TutorialTestController.swift */,
 				AFECF3D2280713F7001B93E4 /* CongratulationController.swift */,
+				AFECF3D6280731FC001B93E4 /* TakeTestController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 				497033C4280019C80064E36F /* System */,
 				49BC74B227FF1B4600F8E614 /* Main.storyboard */,
 				AFECF0D72800749600305FEB /* TutorialStoryboard.storyboard */,
+				AFECF3D4280726E8001B93E4 /* TakeQuizStoryboard.storyboard */,
 			);
 			path = abilitea;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFECF0D82800749600305FEB /* TutorialStoryboard.storyboard in Resources */,
+				AFECF3D5280726E8001B93E4 /* TakeQuizStoryboard.storyboard in Resources */,
 				498D5FBA28002D8700F80C79 /* .gitignore in Resources */,
 				49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */,
 				49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */,
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1569CD7227FF21A400DAEA4C /* questionFeederCrit.swift in Sources */,
+				AFECF3D7280731FC001B93E4 /* TakeTestController.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,
 				AFECF3D3280713F7001B93E4 /* CongratulationController.swift in Sources */,
@@ -374,7 +382,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TutorialStoryboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = TakeQuizStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -403,7 +411,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Abilitea;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TutorialStoryboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = TakeQuizStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
