@@ -356,7 +356,7 @@
                                 <navigationBarAppearance key="compactAppearance"/>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="YXm-D2-afx">
-                                <rect key="frame" x="14" y="140" width="400" height="736.33333333333337"/>
+                                <rect key="frame" x="14" y="140.00000000000006" width="400" height="680.33333333333337"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="William Yulio" translatesAutoresizingMaskIntoConstraints="NO" id="nS6-p6-1YA">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
@@ -373,88 +373,99 @@
                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-eN-SoM">
-                                        <rect key="frame" x="0.0" y="402.33333333333331" width="400" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2CR-eN-SoM">
+                                        <rect key="frame" x="0.0" y="402.33333333333331" width="400" height="28"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="icon-selected-answer-orange" imagePlacement="trailing" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="icon-selected-answer-orange2">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Answer 1">
+                                                <fragment content="   Answer 1">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <font key="NSFont" size="14" name="SFPro-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=" ">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="14" name="SFPro-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="icon-selected-answer-white" backgroundImage="bgMultiplechoice"/>
+                                        <connections>
+                                            <action selector="answer1Action:" destination="bjP-1w-TLZ" eventType="touchUpInside" id="7Lm-oE-zbx"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OED-vw-VNG">
-                                        <rect key="frame" x="0.0" y="462.33333333333331" width="400" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OED-vw-VNG">
+                                        <rect key="frame" x="0.0" y="448.33333333333331" width="400" height="28"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="icon-selected-answer-orange" imagePlacement="trailing" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="icon-selected-answer-orange2">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Answer 2">
+                                                <fragment content="   Answer 2">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <font key="NSFont" size="14" name="SFPro-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="icon-selected-answer-white" backgroundImage="bgMultiplechoice"/>
+                                        <connections>
+                                            <action selector="answer2Action:" destination="bjP-1w-TLZ" eventType="touchUpInside" id="dLh-yS-RE1"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trI-bx-jZ2">
-                                        <rect key="frame" x="0.0" y="522.33333333333337" width="400" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trI-bx-jZ2">
+                                        <rect key="frame" x="0.0" y="494.33333333333331" width="400" height="27.999999999999943"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="icon-selected-answer-orange" imagePlacement="trailing" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="icon-selected-answer-orange2">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Answer 3">
+                                                <fragment content="   Answer 3">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <font key="NSFont" size="14" name="SFPro-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="icon-selected-answer-white" backgroundImage="bgMultiplechoice"/>
+                                        <connections>
+                                            <action selector="answer3Action:" destination="bjP-1w-TLZ" eventType="touchUpInside" id="J1V-va-tH7"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-xO-5K4">
-                                        <rect key="frame" x="0.0" y="582.33333333333337" width="400" height="42"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8u9-xO-5K4">
+                                        <rect key="frame" x="0.0" y="540.33333333333337" width="400" height="28"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="icon-selected-answer-orange" imagePlacement="trailing" cornerStyle="large">
-                                            <backgroundConfiguration key="background">
-                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="icon-selected-answer-orange2">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Answer 4">
+                                                <fragment content="   Answer 4">
                                                     <attributes>
                                                         <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <font key="NSFont" size="14" name="SFPro-Regular"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" image="icon-selected-answer-white" backgroundImage="bgMultiplechoice"/>
+                                        <connections>
+                                            <action selector="answer4Action:" destination="bjP-1w-TLZ" eventType="touchUpInside" id="ecO-IK-TzH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehB-2g-cfI">
-                                        <rect key="frame" x="0.0" y="642.33333333333337" width="400" height="94"/>
+                                        <rect key="frame" x="0.0" y="586.33333333333337" width="400" height="94"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="icon-done-btn"/>
                                         <connections>
@@ -479,6 +490,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answer1" destination="2CR-eN-SoM" id="4GQ-oJ-3fF"/>
+                        <outlet property="answer2" destination="OED-vw-VNG" id="3Oe-2X-1Lz"/>
+                        <outlet property="answer3" destination="trI-bx-jZ2" id="31B-IZ-nfZ"/>
+                        <outlet property="answer4" destination="8u9-xO-5K4" id="nf9-iB-QoD"/>
                         <outlet property="buttonMultipleChoice1" destination="2CR-eN-SoM" id="Pje-du-1Iv"/>
                         <outlet property="buttonMultipleChoice2" destination="OED-vw-VNG" id="p1x-LI-CJz"/>
                         <outlet property="buttonMultipleChoice3" destination="trI-bx-jZ2" id="mJY-Si-33N"/>
@@ -497,10 +512,13 @@
     <resources>
         <image name="Reading Comperhension-beforeFinish" width="1200" height="1700"/>
         <image name="William Yulio" width="1044" height="1567"/>
+        <image name="bgMultiplechoice" width="400" height="28"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="icon-done-btn" width="150" height="80"/>
         <image name="icon-finisih-btn" width="150" height="80"/>
         <image name="icon-selected-answer-orange" width="28" height="28"/>
+        <image name="icon-selected-answer-orange2" width="28" height="28"/>
+        <image name="icon-selected-answer-white" width="28" height="28"/>
         <image name="icon-start-btn" width="150" height="80"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
