@@ -22,13 +22,34 @@ extension UIColor {
 class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
     let occupationSelected =  UserDefaults.standard.object(forKey: "occupation") as? String //sebagai data yang bakal dipake buat occupation yang sesuai
-    
+   
+    var modulCognitivesSD:[String]=["homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-AtD-beforeFinish"]
+    var modulCognitivesGD:[String]=["homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+    var modulCognitivesAcc:[String]=["homepage-module-NM-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
+    var modulCognitivesSales:[String]=["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish"]
+
+    var modulCognitivesCE:[String] =
+            ["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitivesEE:[String] =
+            ["homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
+   
     
     //Data control
     var categoryCheck:Int?
     var finished:Bool = false
     
-    
+   
+    //outlet countdown
+
+    @IBOutlet weak var testLabel: UITextField!
+    let currDate = Date()
+    var timeRemainingSeconds:Int = 0
+    var timeRemaining:String?
+    var timer = Timer()
+  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if(occupationSelected == nil){
             return modulCognitives.count //return 6
@@ -108,6 +129,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
 //        cell.modulCognitive.layer.cornerRadius=50.0
         return cell
     }
+   
     
     //untuk pengecekkan kategori pada masing-masing occupation terhadap index dalam modulCognitives
     func cellClickable(chosen:String){
@@ -160,7 +182,44 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
     var modulCognitives:[String]=["Numberical Reasoning-beforeFinish-FixSize","Problem Solving-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize","Reading Comperhension-beforeFinish-FixSize","Attention to Detail-beforeFinish-FixSize","Spatial Reasoning-beforeFinish-FixSize"]
     
     var modulCognitivesFinished:[String]=["Numberical Reasoning-afterFinish-FixSize","Problem Solving-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Reading Comperhension-afterFinish-FixSize","Attention to Detail-afterFinish-FixSize","Spatial Reasoning-afterFinish-FixSize"]
+  
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor =  UIColor(hex:0x6B5BE2)
+        runCountdown()
+    }
+
+    //countdown
+
+    func runCountdown(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
+        
+    }
     
+    @objc func countTime(){
+        timeRemainingSeconds = 86400 + Int(currDate.timeIntervalSinceNow)
+        var hour:Int
+        var minute:Int
+        
+        hour = timeRemainingSeconds / 3600
+        minute = timeRemainingSeconds % 3600 / 60
+        
+        timeRemaining = "\(String(hour)) Hr \(String(minute)) Minutes"
+        
+        testLabel.text = timeRemaining
+        
+        if timeRemainingSeconds == 0{
+            timer.invalidate()
+        }
+    }
+    
+}
+
+
+class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var Occupation: UITextField!
+    //inisiasi variable category berdasarkan occupation
     
     override func viewDidLoad() {
         super.viewDidLoad()
