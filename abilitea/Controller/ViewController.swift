@@ -143,23 +143,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
 //    var arrOfString:[String] = ["homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
     
     
-    //inisiasi variable category berdasarkan occupation - before
-    
-    var modulCognitivesSD:[String]=["Problem Solving-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize","Attention to Detail-beforeFinish-FixSize"]
-    
-    var modulCognitivesGD:[String]=["Spatial Reasoning-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize","Problem Solving-beforeFinish-FixSize"]
-    
-    var modulCognitivesAcc:[String]=["Numberical Reasoning-beforeFinish-FixSize","Reading Comperhension-beforeFinish-FixSize","Spatial Reasoning-beforeFinish-FixSize"]
-    
-    var modulCognitivesSales:[String]=["Spatial Reasoning-beforeFinish-FixSize","Numberical Reasoning-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize"]
-
-    var modulCognitivesCE:[String] =
-            ["Spatial Reasoning-beforeFinish-FixSize","Numberical Reasoning-beforeFinish-FixSize","Problem Solving-beforeFinish-FixSize"]
-
-    var modulCognitivesEE:[String] =
-            ["Numberical Reasoning-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize","Problem Solving-beforeFinish-FixSize"]
-    
-    
     //inisiasi variable category berdasarkan occupation - after
     var modulCognitivesSDFinished:[String]=["Problem Solving-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Attention to Detail-afterFinish-FixSize"]
     
@@ -175,11 +158,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
     var modulCognitivesEEFinished:[String] =
             ["Numberical Reasoning-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Problem Solving-afterFinish-FixSize"]
     
-    
-    
-    //disesuaikan sama array category pada feeder
-    
-    var modulCognitives:[String]=["Numberical Reasoning-beforeFinish-FixSize","Problem Solving-beforeFinish-FixSize","Critical Thinking-beforeFinish-FixSize","Reading Comperhension-beforeFinish-FixSize","Attention to Detail-beforeFinish-FixSize","Spatial Reasoning-beforeFinish-FixSize"]
     
     var modulCognitivesFinished:[String]=["Numberical Reasoning-afterFinish-FixSize","Problem Solving-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Reading Comperhension-afterFinish-FixSize","Attention to Detail-afterFinish-FixSize","Spatial Reasoning-afterFinish-FixSize"]
   
@@ -224,7 +202,6 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(hex:0x6B5BE2)
-        UserDefaults.standard.set(finished, forKey: "isFinished")
     }
 }
 
