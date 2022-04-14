@@ -279,7 +279,7 @@ class QuizViewController: UIViewController {
         if questionNumber == count-1 {
 
             calculateTimeElapsed()
-//            performSegue(withIdentifier: "toResultSegue", sender: nil)
+            performSegue(withIdentifier: "toResultSegue", sender: nil)
             
         }else{
             if questionNumber == count-2 {
@@ -288,6 +288,14 @@ class QuizViewController: UIViewController {
             questionNumber += 1
         }
         changeQuestion()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResultSegue"{
+            let destinationVC = segue.destination as? ResultViewController
+            destinationVC?.timeElapsed = timeElapsed
+            destinationVC?.arrOfScore = arrOfScore
+        }
     }
 }
 

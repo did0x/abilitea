@@ -415,6 +415,79 @@
             </objects>
             <point key="canvasLocation" x="-3709" y="540"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="4Mx-Rk-n78">
+            <objects>
+                <viewController id="m5u-Xx-06A" customClass="ResultViewController" customModule="abilitea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tk3-az-5yB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LJ4-am-WSn">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="295.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfO-zn-Pe2">
+                                        <rect key="frame" x="134.66666666666666" y="0.0" width="121" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-nx-QrS">
+                                        <rect key="frame" x="174.33333333333334" y="20.333333333333336" width="41.333333333333343" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svf-Bd-Ce8">
+                                        <rect key="frame" x="174.33333333333334" y="40.666666666666664" width="41.333333333333343" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zH5-Ym-dnu">
+                                        <rect key="frame" x="174.33333333333334" y="61.000000000000007" width="41.333333333333343" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EUx-Iq-oVp">
+                                        <rect key="frame" x="0.0" y="81.333333333333329" width="390" height="183.33333333333337"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBV-CJ-opY">
+                                        <rect key="frame" x="164" y="264.66666666666669" width="62" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Finish"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ps8-6S-Uu3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LJ4-am-WSn" firstAttribute="leading" secondItem="ps8-6S-Uu3" secondAttribute="leading" id="42J-kh-L8n"/>
+                            <constraint firstItem="LJ4-am-WSn" firstAttribute="top" secondItem="ps8-6S-Uu3" secondAttribute="top" id="TvU-3P-x6T"/>
+                            <constraint firstItem="ps8-6S-Uu3" firstAttribute="trailing" secondItem="LJ4-am-WSn" secondAttribute="trailing" id="XJJ-X3-2D8"/>
+                            <constraint firstItem="LJ4-am-WSn" firstAttribute="width" secondItem="tk3-az-5yB" secondAttribute="width" id="blE-yQ-fHE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DNL-K7-WPM"/>
+                    <connections>
+                        <outlet property="Button01" destination="tBV-CJ-opY" id="lHQ-Ng-yGO"/>
+                        <outlet property="Label0" destination="5o8-nx-QrS" id="DOz-ww-fxo"/>
+                        <outlet property="Label01" destination="svf-Bd-Ce8" id="Jzg-xR-VCq"/>
+                        <outlet property="Label02" destination="zH5-Ym-dnu" id="1Sd-lK-pnn"/>
+                        <outlet property="Textview01" destination="EUx-Iq-oVp" id="r3M-Cs-TX3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQU-KT-PXg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2912.3076923076924" y="2075.1184834123223"/>
+        </scene>
         <!--Quiz View Controller-->
         <scene sceneID="m6u-oe-wpg">
             <objects>
@@ -425,6 +498,9 @@
                         <viewLayoutGuide key="safeArea" id="ovv-gn-d8S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="m5u-Xx-06A" kind="presentation" identifier="toResultSegue" id="wAr-QM-jh9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmG-nQ-9l0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,7 +508,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="acY-Qx-Eih"/>
+        <segue reference="Ris-20-EfQ"/>
         <segue reference="av6-tj-fnx"/>
     </inferredMetricsTieBreakers>
     <resources>
