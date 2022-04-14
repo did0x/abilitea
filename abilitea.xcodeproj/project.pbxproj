@@ -20,7 +20,6 @@
 		49BC74B627FF1B4700F8E614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B527FF1B4700F8E614 /* Assets.xcassets */; };
 		49BC74B927FF1B4700F8E614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */; };
 		A19A056D280091340087843F /* ModuleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A056C280091340087843F /* ModuleCollectionViewCell.swift */; };
-		AF20FAFA2806AD1900865BD1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF20FAF92806AD1900865BD1 /* SnapKit */; };
 		AFECF0D82800749600305FEB /* TutorialStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFECF0D72800749600305FEB /* TutorialStoryboard.storyboard */; };
 		AFECF0DA280074B700305FEB /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF0D9280074B700305FEB /* TutorialController.swift */; };
 		AFECF3CF2806D066001B93E4 /* GetToKnowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECF3CE2806D066001B93E4 /* GetToKnowController.swift */; };
@@ -60,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF20FAFA2806AD1900865BD1 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +150,6 @@
 			);
 			name = abilitea;
 			packageProductDependencies = (
-				AF20FAF92806AD1900865BD1 /* SnapKit */,
 			);
 			productName = abilitea;
 			productReference = 49BC74A927FF1B4600F8E614 /* abilitea.app */;
@@ -461,14 +458,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AF20FAF92806AD1900865BD1 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AF20FAF82806AD1800865BD1 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49BC74A127FF1B4600F8E614 /* Project object */;
 }
