@@ -10,4 +10,5 @@ import UIKit
 class ModuleCollectionViewCell:
     UICollectionViewCell {
     @IBOutlet weak var modulCognitive: UIImageView!
+    
 }
