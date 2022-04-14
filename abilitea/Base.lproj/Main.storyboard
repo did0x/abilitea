@@ -344,21 +344,6 @@
             </objects>
             <point key="canvasLocation" x="-802" y="-1415"/>
         </scene>
-        <!--Scroll View Controller-->
-        <scene sceneID="7vq-bc-ZZs">
-            <objects>
-                <viewController id="rHe-p1-LtY" userLabel="Scroll View Controller" customClass="ScrollExampleViewController" customModule="abilitea" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4lc-JN-iKT">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="eiX-qw-ZwF"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iVR-Bi-HII" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4754" y="-523"/>
-        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="W61-Vp-5zE">
             <objects>

@@ -8,6 +8,14 @@
 import UIKit
 
 class IntroViewController: UIViewController {
+    
+    private let containerView = UIView()
+    private let scrollView = UIScrollView()
+    private let titleLabel = UILabel()
+    private let messageLabel = UILabel()
+    private let occupationLabel = UILabel()
+    private let pickerButton = PickerButton()
+    private let actionButton = ActionButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()

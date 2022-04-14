@@ -30,7 +30,6 @@
 		498533852806C10C0087CF23 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498533842806C10C0087CF23 /* Module.swift */; };
 		498533872806C1180087CF23 /* ModuleFeeder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498533862806C1180087CF23 /* ModuleFeeder.swift */; };
 		4985338A2806C4610087CF23 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498533892806C4610087CF23 /* PaddingLabel.swift */; };
-		4985338C2806F8960087CF23 /* ScrollExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985338B2806F8960087CF23 /* ScrollExampleViewController.swift */; };
 		4985338E28070EB10087CF23 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985338D28070EB10087CF23 /* QuizViewController.swift */; };
 		49853390280746040087CF23 /* OptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4985338F280746040087CF23 /* OptionButton.swift */; };
 		498533952807A8160087CF23 /* anim-welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = 498533942807A8160087CF23 /* anim-welcome.json */; };
@@ -71,7 +70,6 @@
 		498533842806C10C0087CF23 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		498533862806C1180087CF23 /* ModuleFeeder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFeeder.swift; sourceTree = "<group>"; };
 		498533892806C4610087CF23 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
-		4985338B2806F8960087CF23 /* ScrollExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollExampleViewController.swift; sourceTree = "<group>"; };
 		4985338D28070EB10087CF23 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		4985338F280746040087CF23 /* OptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionButton.swift; sourceTree = "<group>"; };
 		498533942807A8160087CF23 /* anim-welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "anim-welcome.json"; path = "../../../../../Downloads/anim-welcome.json"; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				498533732806B1B30087CF23 /* TabMenuController.swift */,
 				4985337D2806BD1E0087CF23 /* EasyViewController.swift */,
 				4985337F2806BD3A0087CF23 /* SimpleViewController.swift */,
-				4985338B2806F8960087CF23 /* ScrollExampleViewController.swift */,
 				4985338D28070EB10087CF23 /* QuizViewController.swift */,
 				498533A22807BBFE0087CF23 /* IntroViewController.swift */,
 			);
@@ -330,7 +327,6 @@
 				498533A32807BBFE0087CF23 /* IntroViewController.swift in Sources */,
 				498533802806BD3A0087CF23 /* SimpleViewController.swift in Sources */,
 				4985336E2806B15E0087CF23 /* TabMenu.swift in Sources */,
-				4985338C2806F8960087CF23 /* ScrollExampleViewController.swift in Sources */,
 				498533852806C10C0087CF23 /* Module.swift in Sources */,
 				49BC74B127FF1B4600F8E614 /* ViewController.swift in Sources */,
 				49BC74AD27FF1B4600F8E614 /* AppDelegate.swift in Sources */,

@@ -59,13 +59,6 @@ class EasyViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         cell.backgroundImageView.image = arrOfModule[indexPath.row].image
         return cell
     }
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "QuizSegue" {
-//            let viewController = segue.destination as! YOUR_NEXT_VIEWCONTROLLER
-//            viewController.strMaker = sender as? String ?? ""
-//        }
-//    }
     
     private func setupCollectionView() {
         layout.itemSize = CGSize(width: 150, height: 200)
@@ -147,7 +140,7 @@ class EasyViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         }
         
         messageTestLabel.snp.makeConstraints {
-            $0.top.equalTo(titleTestLabel.snp.bottom).inset(4)
+            $0.top.equalTo(titleTestLabel.snp.bottom).inset(-4)
             $0.leading.trailing.equalToSuperview()
         }
         
@@ -177,7 +170,7 @@ class EasyViewController: UIViewController, UIScrollViewDelegate, UICollectionVi
         historyButton.backgroundColor = .systemIndigo
         historyButton.setupCornerRadius(12)
         
-        backgroundImageView.image = UIImage(named: "bg-take-test")
+        backgroundImageView.image = UIImage(named: "button-tutorial")
         titleTestLabel.configureWith("Take Your Cognitive Test!", color: .white, alignment: .center, size: 24, weight: .bold)
         messageTestLabel.configureWith("Let’s try your cognitive ability", color: .white, alignment: .center, size: 14, weight: .bold)
         actionButton.setTitle("Finish Your Modules First", for: .normal)
