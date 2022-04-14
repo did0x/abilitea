@@ -8,17 +8,16 @@
 import Foundation
 import UIKit
 
-struct questionStructure{
+struct questionStructure {
     
     let questionImage:String?
-    let questionText:String
+    let questionText:String?
     
-    let optionA:String
-    let optionB:String
-    let optionC:String
-    let optionD:String
+    let optionA:String?
+    let optionB:String?
+    let optionC:String?
+    let optionD:String?
     
-    let answer:String
+    let answer:String?
+    let category:String?
 }
-
-

@@ -18,136 +18,191 @@ extension UIColor {
     }
 }
 
-class WelcomepageViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource{
-    
-    @IBOutlet weak var ilustrationImageView: UIImageView!
-    @IBOutlet weak var occupationButton: UIButton!
-    
-    @IBAction func popUpPicker(_ sender: UIButton) {
-        let vc = UIViewController()
-        vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
-        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
 
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        
-        pickerView.selectRow(selectedRow, inComponent: 0, animated: false)
-        
-        vc.view.addSubview(pickerView)
-        pickerView.centerXAnchor.constraint(equalTo: vc.view.centerXAnchor).isActive = true
-        pickerView.centerYAnchor.constraint(equalTo: vc.view.centerYAnchor).isActive = true
-        
-        let alert = UIAlertController(title: "Select Occupation", message: "", preferredStyle: .actionSheet)
-        alert.setValue(vc, forKey: "contentViewController")
-        
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(UIAlertAction) in
-        }))
-        alert.addAction(UIAlertAction(title: "Proceed", style: .default, handler: {(UIAlertAction) in
-            self.selectedRow = pickerView.selectedRow(inComponent: 0)
-            let selected = Array(self.occupations)[self.selectedRow] //yang dipilih user, dijadiin parameter terhadap kategori yang diambil
-            self.occupationButton.setTitle(selected, for: .normal)
-        }))
-        self.present(alert,animated: true,completion: nil)
+class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    let occupationSelected =  UserDefaults.standard.object(forKey: "occupation") as? String //sebagai data yang bakal dipake buat occupation yang sesuai
+   
+    var modulCognitivesSD:[String]=["homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-AtD-beforeFinish"]
+    var modulCognitivesGD:[String]=["homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+    var modulCognitivesAcc:[String]=["homepage-module-NM-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
+    var modulCognitivesSales:[String]=["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish"]
+
+    var modulCognitivesCE:[String] =
+            ["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitivesEE:[String] =
+            ["homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
+   
+    
+    //Data control
+    var categoryCheck:Int?
+    var finished:Bool = false
+    
+   
+    //outlet countdown
+
+    @IBOutlet weak var testLabel: UITextField!
+    let currDate = Date()
+    var timeRemainingSeconds:Int = 0
+    var timeRemaining:String?
+    var timer = Timer()
+  
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if(occupationSelected == nil){
+            return modulCognitives.count //return 6
+        }
+        else{
+            return modulCognitivesCE.count //return 3
+        }
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //placeholder
+//        let button = UIButton(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
+        
+        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ModuleCollectionViewCell
+        
+        if(finished != true){
+            if(occupationSelected == "Software Developer/Engineer"){
+                
+                cell.modulCognitive.image=UIImage(named: modulCognitivesSD[indexPath.row])
+    //            button.addTarget(self, action: #selector(modulCognitivesSD[indexPath.row]), for: .touchUpInside)
+    //
+    //            @objc func modulCognitivesSD[indexPath.row](sender: UIButton!) {
+    //                cellClickable(chosen: modulCognitivesSD[indexPath.row])
+    //
+    //            }
+                
+            }
+            else if(occupationSelected == "Graphic Designer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesGD[indexPath.row])
+            }
+            else if(occupationSelected == "Accountants"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesAcc[indexPath.row])
+            }
+            else if(occupationSelected == "Sales"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesSales[indexPath.row])
+            }
+            else if(occupationSelected == "Civil Engineer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesCE[indexPath.row])
+            }
+            else if(occupationSelected == "Electrical Engineer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesEE[indexPath.row])
+            }
+            else if(occupationSelected == nil){
+                cell.modulCognitive.image=UIImage(named: modulCognitives[indexPath.row])
+            }
+        }
+        else{
+            if(occupationSelected == "Software Developer/Engineer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesSDFinished[indexPath.row])
+    //            button.addTarget(self, action: #selector(modulCognitivesSD[indexPath.row]), for: .touchUpInside)
+    //
+    //            @objc func modulCognitivesSD[indexPath.row](sender: UIButton!) {
+    //                cellClickable(chosen: modulCognitivesSD[indexPath.row])
+    //
+    //            }
+            }
+            else if(occupationSelected == "Graphic Designer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesGDFinished[indexPath.row])
+            }
+            else if(occupationSelected == "Accountants"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesAccFinished[indexPath.row])
+            }
+            else if(occupationSelected == "Sales"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesSalesFinished[indexPath.row])
+            }
+            else if(occupationSelected == "Civil Engineer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesCEFinished[indexPath.row])
+            }
+            else if(occupationSelected == "Electrical Engineer"){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesEEFinished[indexPath.row])
+            }
+            else if(occupationSelected == nil){
+                cell.modulCognitive.image=UIImage(named: modulCognitivesFinished[indexPath.row])
+            }
+        }
+//        cell.modulCognitive.layer.cornerRadius=50.0
+        return cell
+    }
+   
+    
+    //untuk pengecekkan kategori pada masing-masing occupation terhadap index dalam modulCognitives
+    func cellClickable(chosen:String){
+        categoryCheck = modulCognitives.firstIndex(of: chosen)
+    }
+    func cellClickableFinsihed(chosenFinished:String){
+        categoryCheck = modulCognitivesFinished.firstIndex(of: chosenFinished)
+    }
+    
+    
+//    var arrOfString:[String] = ["homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
+    
+    
+    //inisiasi variable category berdasarkan occupation - after
+    var modulCognitivesSDFinished:[String]=["Problem Solving-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Attention to Detail-afterFinish-FixSize"]
+    
+    var modulCognitivesGDFinished:[String]=["Spatial Reasoning-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Problem Solving-afterFinish-FixSize"]
+    
+    var modulCognitivesAccFinished:[String]=["Numberical Reasoning-afterFinish-FixSize","Reading Comperhension-afterFinish-FixSize","Spatial Reasoning-afterFinish-FixSize"]
+    
+    var modulCognitivesSalesFinished:[String]=["Spatial Reasoning-afterFinish-FixSize","Numberical Reasoning-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize"]
+
+    var modulCognitivesCEFinished:[String] =
+            ["Spatial Reasoning-afterFinish-FixSize","Numberical Reasoning-afterFinish-FixSize","Problem Solving-afterFinish-FixSize"]
+
+    var modulCognitivesEEFinished:[String] =
+            ["Numberical Reasoning-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Problem Solving-afterFinish-FixSize"]
+    
+    
+    var modulCognitivesFinished:[String]=["Numberical Reasoning-afterFinish-FixSize","Problem Solving-afterFinish-FixSize","Critical Thinking-afterFinish-FixSize","Reading Comperhension-afterFinish-FixSize","Attention to Detail-afterFinish-FixSize","Spatial Reasoning-afterFinish-FixSize"]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-        ilustrationImageView.image = UIImage(named: "ilustrasiSementara")
+        view.backgroundColor =  UIColor(hex:0x6B5BE2)
+        runCountdown()
+    }
+
+    //countdown
+
+    func runCountdown(){
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.countTime), userInfo: nil, repeats: true)
+        
     }
     
-    //data control
-    var screenWidth = UIScreen.main.bounds.width - 10
-    var screenHeight = UIScreen.main.bounds.height / 2
-    var selectedRow = 0
-    
-    let occupations = ["Engineer","Grapich Designer","Doctor","Teacher","Lecture","Architecture","Human Resource","Physcolog","Farmers"]
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let labelOccupation = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
-        labelOccupation.text = occupations[row]
-        labelOccupation.sizeToFit()
-        return labelOccupation
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return occupations.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 60
+    @objc func countTime(){
+        timeRemainingSeconds = 86400 + Int(currDate.timeIntervalSinceNow)
+        var hour:Int
+        var minute:Int
+        
+        hour = timeRemainingSeconds / 3600
+        minute = timeRemainingSeconds % 3600 / 60
+        
+        timeRemaining = "\(String(hour)) Hr \(String(minute)) Minutes"
+        
+        testLabel.text = timeRemaining
+        
+        if timeRemainingSeconds == 0{
+            timer.invalidate()
+        }
     }
     
 }
 
 
-class HomepageViewController: UIViewController, UICollectionViewDelegate,UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return modulCognitives.count
-    }
+class SettingsViewController: UIViewController {
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ModuleCollectionViewCell
-        
-        cell.modulCognitive.image=UIImage(named: modulCognitives[indexPath.row])
-//        cell.modulCognitive.layer.cornerRadius=50.0
-        return cell
-    }
-    
-    
-    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
+    @IBOutlet weak var Occupation: UITextField!
+    //inisiasi variable category berdasarkan occupation
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(hex:0x6B5BE2)
     }
-
-}
-
-class SettingsViewController: UIViewController {
-    
-    @IBOutlet weak var Occupation: UITextField!
-    
-    let occupations = ["Engineer","Grapich Designer","Doctor","Teacher","Lecture","Architecture","Human Resource","Physcolog","Farmers"]
-    
-    var pickerView = UIPickerView()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor =  UIColor(hex:0xFBF9FF)
-        
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        Occupation.inputView = pickerView
-        Occupation.textAlignment = .center
-    }
-    
-}
-
-extension SettingsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return occupations.count
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return occupations[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        Occupation.text = occupations[row]
-        Occupation.resignFirstResponder()
-    }
-    
 }
 
 
