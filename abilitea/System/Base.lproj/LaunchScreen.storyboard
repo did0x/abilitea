@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,23 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Apple Developer Academy . Mini Challange 01" textAlignment="center" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yxu-WO-K3j">
-                                <rect key="frame" x="37" y="762" width="316" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-abilitea" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-jB-Cdm">
-                                <rect key="frame" x="37" y="245" width="316" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-app-image" translatesAutoresizingMaskIntoConstraints="NO" id="ZiR-S9-aDA">
+                                <rect key="frame" x="106" y="333" width="178" height="178"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-abilitea-title" translatesAutoresizingMaskIntoConstraints="NO" id="vlU-Cc-FNs">
-                                <rect key="frame" x="100" y="421" width="191" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-app-name" translatesAutoresizingMaskIntoConstraints="NO" id="irR-AL-mUA">
+                                <rect key="frame" x="0.0" y="535" width="390" height="51"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Developer Academy . Mini Challange 01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msh-Xe-SqN">
+                                <rect key="frame" x="0.0" y="731" width="390" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="irR-AL-mUA" firstAttribute="top" secondItem="ZiR-S9-aDA" secondAttribute="bottom" constant="24" id="Fvh-46-BNv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="msh-Xe-SqN" secondAttribute="bottom" constant="64" id="Vha-Cm-L4i"/>
+                            <constraint firstItem="msh-Xe-SqN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cef-C0-86d"/>
+                            <constraint firstItem="irR-AL-mUA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cjn-NR-SVt"/>
+                            <constraint firstItem="ZiR-S9-aDA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eQR-1v-wU8"/>
+                            <constraint firstAttribute="trailing" secondItem="msh-Xe-SqN" secondAttribute="trailing" id="fNd-hh-59A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="irR-AL-mUA" secondAttribute="trailing" id="ggM-sz-Hox"/>
+                            <constraint firstItem="ZiR-S9-aDA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="h4l-BM-m4K"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -41,8 +49,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon-abilitea" width="178" height="178"/>
-        <image name="icon-abilitea-title" width="209" height="51"/>
+        <image name="logo-app-image" width="178" height="178"/>
+        <image name="logo-app-name" width="209" height="51"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

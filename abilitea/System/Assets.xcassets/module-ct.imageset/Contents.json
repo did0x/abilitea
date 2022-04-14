@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "module-ct.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
