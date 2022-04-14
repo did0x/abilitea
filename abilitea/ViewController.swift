@@ -10,10 +10,10 @@ import UIKit
 class ViewController: UIViewController {
 
     //Data
-    var arrOfQuestion: [questionStruct] = []
-    var arrOfNumerical: [questionStruct] = []
-    var arrOfCritical: [questionStruct] = []
-    var arrOfProblem: [questionStruct] = []
+    var arrOfQuestion: [questionStructure] = []
+    var arrOfNumerical: [questionStructure] = []
+    var arrOfCritical: [questionStructure] = []
+    var arrOfProblem: [questionStructure] = []
     var arrOfCategory: [String] = ["Numerical", "Problem", "Critical"]
     var Score = questionScore()
     var option:String? = nil
@@ -82,8 +82,8 @@ class ViewController: UIViewController {
         }
     }
     
-    func randomizeQuestion(randomArray: [questionStruct]){
-        let shuffled: [questionStruct] = randomArray.shuffled()
+    func randomizeQuestion(randomArray: [questionStructure]){
+        let shuffled: [questionStructure] = randomArray.shuffled()
         let temp = (30 / numOfCategory)
         var i = 0
         

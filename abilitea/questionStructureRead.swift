@@ -10,11 +10,12 @@ import UIKit
 
 struct questionStructureRead{
     
-    let questionText:String?
-    let optionA:String?
-    let optionB:String?
-    let optionC:String?
-    let optionD:String?
-    let answer:String?
+    let questionText:String
+
+    let optionA:String
+    let optionB:String
+    let optionC:String
+    let optionD:String
     
+    let answer:String
 }
