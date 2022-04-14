@@ -49,6 +49,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49A03CEC2807D27E00B4EE4D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		49A03CED2807D29400B4EE4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1569CD6927FF210E00DAEA4C /* questionStructure.swift */,
+				6B19393C280072E30016A47A /* questionScore.swift */,
+				1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */,
+				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
+				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
+				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49A03CEE2807D2A300B4EE4D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */,
+				49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */,
+				49BC74B527FF1B4700F8E614 /* Assets.xcassets */,
+				49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */,
+				49BC74BA27FF1B4700F8E614 /* Info.plist */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		49BC74A027FF1B4600F8E614 = {
 			isa = PBXGroup;
 			children = (
@@ -68,19 +101,10 @@
 		49BC74AB27FF1B4600F8E614 /* abilitea */ = {
 			isa = PBXGroup;
 			children = (
-				49BC74AC27FF1B4600F8E614 /* AppDelegate.swift */,
-				49BC74AE27FF1B4600F8E614 /* SceneDelegate.swift */,
-				49BC74B027FF1B4600F8E614 /* ViewController.swift */,
+				49A03CEC2807D27E00B4EE4D /* Controller */,
+				49A03CED2807D29400B4EE4D /* Models */,
+				49A03CEE2807D2A300B4EE4D /* System */,
 				49BC74B227FF1B4600F8E614 /* Main.storyboard */,
-				49BC74B527FF1B4700F8E614 /* Assets.xcassets */,
-				49BC74B727FF1B4700F8E614 /* LaunchScreen.storyboard */,
-				1569CD6927FF210E00DAEA4C /* questionStructure.swift */,
-				6B19393C280072E30016A47A /* questionScore.swift */,
-				1569CD6B27FF215300DAEA4C /* questionStructureRead.swift */,
-				1569CD6D27FF216F00DAEA4C /* questionFeederNum.swift */,
-				1569CD6F27FF218600DAEA4C /* questionFeederProb.swift */,
-				1569CD7127FF21A400DAEA4C /* questionFeederCrit.swift */,
-				49BC74BA27FF1B4700F8E614 /* Info.plist */,
 			);
 			path = abilitea;
 			sourceTree = "<group>";
