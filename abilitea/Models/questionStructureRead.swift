@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct questionStructureRead{
+struct questionStructureRead {
     
     let questionText:String
 
