@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct questionStructure {
+struct QuestionStruct {
     
     let questionImage:String?
     let questionText:String?
