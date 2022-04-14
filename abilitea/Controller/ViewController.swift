@@ -23,6 +23,18 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
     
     let occupationSelected =  UserDefaults.standard.object(forKey: "occupation") as? String //sebagai data yang bakal dipake buat occupation yang sesuai
    
+    var modulCognitivesSD:[String]=["homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-AtD-beforeFinish"]
+    var modulCognitivesGD:[String]=["homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+    var modulCognitivesAcc:[String]=["homepage-module-NM-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
+    var modulCognitivesSales:[String]=["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish"]
+
+    var modulCognitivesCE:[String] =
+            ["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitivesEE:[String] =
+            ["homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
+
+    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
     
     //outlet countdown
 
@@ -74,8 +86,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate,UIColle
     }
    
     
-    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor =  UIColor(hex:0x6B5BE2)
@@ -113,19 +123,6 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var Occupation: UITextField!
     //inisiasi variable category berdasarkan occupation
-    var modulCognitivesSD:[String]=["homepage-module-PS-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-AtD-beforeFinish"]
-    var modulCognitivesGD:[String]=["homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
-    var modulCognitivesAcc:[String]=["homepage-module-NM-beforeFinish","homepage-module-RC-beforeFinish","homepage-module-SR-beforeFinish"]
-    var modulCognitivesSales:[String]=["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish"]
-
-    var modulCognitivesCE:[String] =
-            ["homepage-module-SR-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-PS-beforeFinish"]
-
-    var modulCognitivesEE:[String] =
-            ["homepage-module-NM-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-PS-beforeFinish"]
-
-    var modulCognitives:[String]=["homepage-module-RC-beforeFinish","homepage-module-PS-beforeFinish","homepage-module-SR-beforeFinish","homepage-module-CT-beforeFinish","homepage-module-NM-beforeFinish","homepage-module-AtD-beforeFinish"]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
